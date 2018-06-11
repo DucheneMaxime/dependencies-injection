@@ -4,7 +4,10 @@ import { FormationService } from '../services/FormationService';
 @Component({
   selector: 'app-formation-list',
   templateUrl: './formation-list.component.html',
-  styleUrls: ['./formation-list.component.css']
+  styleUrls: ['./formation-list.component.css'],
+  providers: [
+    FormationService
+  ]
 })
 export class FormationListComponent implements OnInit {
   private _formations : Array<Formation>;
