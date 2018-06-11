@@ -1,12 +1,15 @@
 import { Formation } from "../formation-list/formation-list.component";
+import { Injectable } from "@angular/core";
+import FormationApi from "./FormationApi";
 
+@Injectable()
 export class FormationService {
 
-    getFormations(){
-        let res:Array<Formation> = new Array<Formation>();
-        res.push(new Formation("form1", "descr1"));
-        res.push(new Formation("form2", "descr2"));
-        res.push(new Formation("form3", "descr3"));
-        return res;
+    constructor(private formationApi: FormationApi){
+
+    }
+
+    getFormations(): Promise<Array<Formation>>{
+        return this.formationApi.fetchFormation();
     }
 }

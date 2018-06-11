@@ -22,7 +22,7 @@ export class FormationListComponent implements OnInit {
   }
   
   ngOnInit() {
-    this.formations = this.formationService.getFormations();
+    this.formationService.getFormations().then(value => this.formations = value);
   }
 
 }
