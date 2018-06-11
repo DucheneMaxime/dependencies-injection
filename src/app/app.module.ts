@@ -14,7 +14,6 @@ import { FormationService } from "./services/FormationService";
     BrowserModule
   ],
   providers: [
-    FormationService
   ],
   bootstrap: [AppComponent]
 })
